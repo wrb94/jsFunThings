@@ -2,17 +2,17 @@ var assert = require('assert');
 var eq = require('../../src/eq');
 
 describe('== abstract equality comparison', function () {
-    it.skip('Type(x) is the same as Type(y)', function () {
+    it('Type(x) is the same as Type(y)', function () {
         assert.ok(5 == 5);
         assert.ok(eq(5, 5));
     });
 
-    it.skip('If x is null and y is undefined, return true', function () {
+    it('If x is null and y is undefined, return true', function () {
         assert.ok(null == undefined);
         assert.ok(eq(null, undefined));
     });
 
-    it.skip('If x is undefined and y is null, return true.', function () {
+    it('If x is undefined and y is null, return true.', function () {
         assert.ok(undefined == null);
         assert.ok(eq(undefined, null));
     });
