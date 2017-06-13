@@ -1,7 +1,7 @@
 var assert = require('assert');
 var eq = require('../../src/eq');
 
-describe('== abstract equality comparison', function () {
+describe.skip('== abstract equality comparison', function () {
     it('Type(x) is the same as Type(y)', function () {
         assert.ok(5 == 5);
         assert.ok(eq(5, 5));
@@ -17,7 +17,7 @@ describe('== abstract equality comparison', function () {
         assert.ok(eq(undefined, null));
     });
 
-    it.skip('If Type(x) is Number and Type(y) is String, return the result of the comparison x == ToNumber(y).', function () {
+    it('If Type(x) is Number and Type(y) is String, return the result of the comparison x == ToNumber(y).', function () {
         assert.ok(1 == '1');
         assert.ok(1 != '2');
 
@@ -25,7 +25,7 @@ describe('== abstract equality comparison', function () {
         assert.ok(!eq(1, '2'));
     });
 
-    it.skip('If Type(x) is String and Type(y) is Number, return the result of the comparison ToNumber(x) == y.', function () {
+    it('If Type(x) is String and Type(y) is Number, return the result of the comparison ToNumber(x) == y.', function () {
         assert.ok('1' == 1);
         assert.ok('1' != 2);
 

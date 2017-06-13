@@ -1,3 +1,17 @@
 module.exports = function toPrimitive(x) {
-    // TODO: your code goes here
+    if (!isObject(x))
+        return x;
+    else if (!isObject(x.valueOf())) {
+        return toPrimitive(x.valueOf());
+    }
+    else if (!isObject(x.toString()))
+        return toPrimitive(x.toString());
+    else
+        throw TypeError('input cannot be converted to primitive');
 };
+
+function isObject(value) {
+    return (value !== null) &&
+        ((typeof value === 'object') ||
+            (typeof value === 'function'));
+}

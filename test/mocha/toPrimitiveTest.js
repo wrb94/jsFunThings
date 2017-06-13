@@ -2,18 +2,18 @@ var assert = require('assert');
 var Primitive = require('../../src/toPrimitive');
 
 describe('ToPrimitive', function () {
-    it.skip('converts primitive input type', function () {
+    it('converts primitive input type', function () {
         assert.strictEqual(Primitive(1), 1);
         assert.strictEqual(Primitive('a'), 'a');
         assert.strictEqual(Primitive(null), null);
     });
 
-    it.skip('converts object with valueOf happy path', function () {
+    it('converts object with valueOf happy path', function () {
         var o = {
-            valueOf: function() {
+            valueOf: function () {
                 return 1;
             },
-            toString: function() {
+            toString: function () {
                 return '1';
             }
         };
@@ -21,12 +21,12 @@ describe('ToPrimitive', function () {
         assert.strictEqual(Primitive(o), 1);
     });
 
-    it.skip('converts object with valueOf unhappy path', function () {
+    it('converts object with valueOf unhappy path', function () {
         var o = {
-            valueOf: function() {
+            valueOf: function () {
                 return {};
             },
-            toString: function() {
+            toString: function () {
                 return '1';
             }
         };
@@ -35,12 +35,12 @@ describe('ToPrimitive', function () {
     });
 
 
-    it.skip('fails on inconvertible input', function () {
+    it('fails on inconvertible input', function () {
         var o = {
-            toString: function() {
+            toString: function () {
                 return {};
             },
-            valueOf: function() {
+            valueOf: function () {
                 return {};
             }
         };
