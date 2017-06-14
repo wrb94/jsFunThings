@@ -1,7 +1,7 @@
 # Deeper.js
 
 ```
-npm i
+npm install
 npm run mocha
 npm run tape
 npm run jest

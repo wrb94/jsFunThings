@@ -17,14 +17,14 @@ var fetchUserByIdCurried = curry(fetchUserById);
 // we make ajax based fetcher here
 var fetchById = fetchUserByIdCurried(ajax);
 
-test.skip('happy path', function (done) {
+test('happy path', function (done) {
     return fetchById('user123').then(function (data) {
         expect(data).toEqual({ name: 'John Doe' });
         done();
     });
 });
 
-test.skip('unhappy path', function (done) {
+test('unhappy path', function (done) {
     return fetchById('').catch(function (error) {
         expect(error).toBe('no user id');
         done();
