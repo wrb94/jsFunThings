@@ -1,4 +1,4 @@
-var {Programmer1, Programmer2, Programmer3, createProgrammer} = require('../../src/programmer');
+var { Programmer1, Programmer2, Programmer3, createProgrammer } = require('../../src/programmer');
 
 test.skip('thisful with .prototype', function () {
     var programmer = new Programmer1();

@@ -18,7 +18,7 @@ function NullPerson(name) {
     return null; // it has to be an object, not primitive value
 }
 
-test('allows to create new objects', function () {
+test.skip('allows to create new objects', function () {
     var p1 = new Person('Mateusz');
     var p2 = new AnotherPerson('Kate'); // it's a function constructor call
     var p3 = new NullPerson('Mateusz');

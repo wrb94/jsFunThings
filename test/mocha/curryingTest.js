@@ -6,7 +6,7 @@ function sum(a, b, c) {
     return a + b + c;
 }
 
-describe('currying', function () {
+describe.skip('currying', function () {
     it('f(a,b,c)', function () {
         var sumC = curry(sum);
 

@@ -2,7 +2,7 @@
   "scripts": {
     "mocha": "mocha test/mocha/*Test.js",
     "tape": "tape test/tape/*Test.js",
-    "jest": "jest --env=node test/jest",
+    "jest": "jest",
     "test": "npm run mocha && npm run tape && npm run jest"
   },
   "devDependencies": {

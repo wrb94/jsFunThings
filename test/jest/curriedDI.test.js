@@ -1,8 +1,8 @@
 var curry = require('../../src/curry');
 
 function ajax(userId) {
-    if(!userId) throw new Error('should not happen');
-    return Promise.resolve({name: 'John Doe'});
+    if (!userId) throw new Error('should not happen');
+    return Promise.resolve({ name: 'John Doe' });
 }
 
 // we can create function templates from the base function
@@ -18,14 +18,14 @@ var fetchUserByIdCurried = curry(fetchUserById);
 var fetchById = fetchUserByIdCurried(ajax);
 
 test.skip('happy path', function (done) {
-    return fetchById('user123').then(function(data) {
-        expect(data).toEqual({name: 'John Doe'});
+    return fetchById('user123').then(function (data) {
+        expect(data).toEqual({ name: 'John Doe' });
         done();
     });
 });
 
 test.skip('unhappy path', function (done) {
-    return fetchById('').catch(function(error) {
+    return fetchById('').catch(function (error) {
         expect(error).toBe('no user id');
         done();
     });
