@@ -1,11 +1,10 @@
 # Deeper.js
 
 ```
-npm i
+npm install
 npm run mocha
 npm run tape
 npm run jest
 ```
 
-Most tests are marked as skipped.
-Remember to remove skip one by one as you implement solutions to the exercices.
+Choose your test runner and try to do task from instructions.md. Remove .skip from test/<your test runner> to check your solution.
