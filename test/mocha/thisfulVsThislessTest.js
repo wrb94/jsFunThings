@@ -1,7 +1,7 @@
 var assert = require('assert');
 var { Programmer1, Programmer2, Programmer3, createProgrammer } = require('../../src/programmer');
 
-describe.skip('Comparing thisful and thisless style of programming', function () {
+describe('Comparing thisful and thisless style of programming', function () {
     it('thisful with .prototype', function () {
         var programmer = new Programmer1();
 

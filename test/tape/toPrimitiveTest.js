@@ -1,7 +1,7 @@
 var test = require('tape');
 var Primitive = require('../../src/toPrimitive');
 
-test.skip('converts primitive input type', function (t) {
+test('converts primitive input type', function (t) {
     t.strictEqual(Primitive(1), 1);
     t.strictEqual(Primitive('a'), 'a');
     t.strictEqual(Primitive(null), null);
@@ -9,12 +9,12 @@ test.skip('converts primitive input type', function (t) {
     t.end();
 });
 
-test.skip('converts object with valueOf happy path', function (t) {
+test('converts object with valueOf happy path', function (t) {
     var o = {
-        valueOf: function() {
+        valueOf: function () {
             return 1;
         },
-        toString: function() {
+        toString: function () {
             return '1';
         }
     };
@@ -24,12 +24,12 @@ test.skip('converts object with valueOf happy path', function (t) {
     t.end();
 });
 
-test.skip('converts object with valueOf unhappy path', function (t) {
+test('converts object with valueOf unhappy path', function (t) {
     var o = {
-        valueOf: function() {
+        valueOf: function () {
             return {};
         },
-        toString: function() {
+        toString: function () {
             return '1';
         }
     };
@@ -40,12 +40,12 @@ test.skip('converts object with valueOf unhappy path', function (t) {
 });
 
 
-test.skip('fails on inconvertible input', function (t) {
+test('fails on inconvertible input', function (t) {
     var o = {
-        toString: function() {
+        toString: function () {
             return {};
         },
-        valueOf: function() {
+        valueOf: function () {
             return {};
         }
     };

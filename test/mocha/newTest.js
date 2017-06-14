@@ -19,7 +19,7 @@ function NullPerson(name) {
     return null; // it has to be an object, not primitive value
 }
 
-describe.skip('NEW', function () {
+describe('NEW', function () {
     it('allows to create new objects', function () {
         var p1 = new Person('Mateusz');
         var p2 = new AnotherPerson('Kate'); // it's a function constructor call

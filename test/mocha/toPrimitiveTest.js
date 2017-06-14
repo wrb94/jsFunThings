@@ -1,7 +1,7 @@
 var assert = require('assert');
 var Primitive = require('../../src/toPrimitive');
 
-describe.skip('ToPrimitive', function () {
+describe('ToPrimitive', function () {
     it('converts primitive input type', function () {
         assert.strictEqual(Primitive(1), 1);
         assert.strictEqual(Primitive('a'), 'a');
